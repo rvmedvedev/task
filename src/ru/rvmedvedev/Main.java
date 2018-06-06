@@ -4,7 +4,7 @@ import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static ru.rvmedvedev.NameBuilder.buldColumnNames;
+import static ru.rvmedvedev.NameBuilder.buildColumnNames;
 
 public class Main {
 
@@ -26,16 +26,17 @@ public class Main {
                 numbers.add(input.nextInt());
             }
 
-            columnNames = buldColumnNames(numbers);
-            for (String colName: columnNames) {
+            columnNames = buildColumnNames(numbers);
+            for (String colName : columnNames) {
                 System.out.println(colName);
             }
 
             System.out.println("Для выхода из программы введите 'exit'.");
             keyPress = input.next();
 
-            if (keyPress.equals("exit"))
+            if (keyPress.equals("exit")) {
                 System.exit(0);
+            }
         } while (!keyPress.equals("exit"));
     }
 }
